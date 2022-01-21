@@ -4,8 +4,8 @@ import projeto.banco.Conta;
 
 public class ContaPoupanca extends Conta {
 
+    //Gera extrato bancário
     public void imprimirExtrato() {
-        System.out.println("-=-=-= Extrato Conta Poupança -=-=-=");
         super.imprimirInfos();
     }
 }
