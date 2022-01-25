@@ -13,6 +13,7 @@ public abstract class Conta extends Main {
     protected int agencia;
     protected int numero;
     protected double saldo;
+    protected String titular;
 
     //Criação de novas contas no banco
     public Conta() {
@@ -56,8 +57,7 @@ public abstract class Conta extends Main {
     protected void imprimirInfos() {
         System.out.println(String.format("Conta: %d", this.numero));
         System.out.println(String.format("Agencia: %d", this.agencia));
-        System.out.println(String.format("Saque: R$%.2f", this.saldo));
+        System.out.println(String.format("Saldo: R$%.2f", this.saldo));
     }
-
 
 }

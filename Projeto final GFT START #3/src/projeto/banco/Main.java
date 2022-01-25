@@ -2,9 +2,6 @@ package projeto.banco;
 
 //Importando Sub Classes e funções
 
-import projeto.banco.tipoconta.ContaCorrente;
-import projeto.banco.tipoconta.ContaPoupanca;
-
 import java.util.Scanner;
 
 public class Main {
@@ -25,20 +22,34 @@ public class Main {
         System.out.println("");
         int servico = scan.nextInt();
 
-        //Instanciamento das classes Conta Corrente e Conta Poupanca
+        //Instanciamento para criação de novas contas correntes e poupanças
         Conta cc = new ContaCorrente();
         Conta poupanca = new ContaPoupanca();
 
             switch (servico) {
                 //Abre uma nova Conta Corrente
                 case 1:
+                    System.out.println("Digite seu nome: ");
+                    Cliente novoCliente = new Cliente();
+                    novoCliente.setNome(scan.next());
+                    System.out.println("Digite sua idade: ");
+                    novoCliente.setIdade(scan.next());
                     cc = new ContaCorrente();
+                    System.out.println("Nome: " + novoCliente.getNome());
+                    System.out.println("Idade: " + novoCliente.getIdade());
                     cc.imprimirInfos();
                     break;
 
                 //Abre uma nova Conta Poupança
                 case 2:
+                    System.out.println("Digite seu nome: ");
+                    Cliente novoClientePoupanca = new Cliente();
+                    novoClientePoupanca.setNome(scan.next());
+                    System.out.println("Digite sua idade: ");
+                    novoClientePoupanca.setIdade(scan.next());
                     poupanca = new ContaPoupanca();
+                    System.out.println("Nome: " + novoClientePoupanca.getNome());
+                    System.out.println("Idade: " + novoClientePoupanca.getIdade());
                     poupanca.imprimirInfos();
                     break;
 
